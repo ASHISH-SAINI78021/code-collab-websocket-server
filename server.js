@@ -11,12 +11,6 @@ const io = new Server(server);
 const PORT = 5000;
 const userSocketMap = {};
 
-// production -> deployment
-app.use(express.static(path.join(__dirname , "./code-collab/dist")));
-
-app.use("*" , (req , res , next)=> {
-    res.sendFile(path.join(__dirname , "./client/code-collab/index.html"));
-})
 
 const getAllConnectedClients = (roomId) => {
   // notes
