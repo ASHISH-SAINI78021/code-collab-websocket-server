@@ -12,6 +12,7 @@ const PORT = 5000;
 const userSocketMap = {};
 
 
+
 const getAllConnectedClients = (roomId) => {
   // notes
   // io.sockets.adapter.rooms.get(roomId) -> it will return a hash map of connected users with socket id's
@@ -45,13 +46,6 @@ io.on("connection", (socket) => {
       });
     });
   });
-
-
-  // // change language
-  // socket.on(ACTIONS.LANGUAGE_CHANGE, ({ roomId, language }) => {
-  //   console.log(`Received LANGUAGE_CHANGE for roomId ${roomId}, language: ${language}`);
-  //   io.in(roomId).emit(ACTIONS.LANGUAGE_CHANGE, { language });
-  // });
 
   // sync code
   socket.on(ACTIONS.SYNC_CODE, ({ socketId, code }) => {

@@ -5,7 +5,8 @@ const ACTIONS = {
     CODE_CHANGE : "code-change" ,
     SYNC_CODE : "sync-code" ,
     LEAVE : "leave" ,
-    LANGUAGE_CHANGE : "language-change"
+    LANGUAGE_CHANGE : "language-change" ,
+    CHAT_MESSAGE: "chat_message",
 }
 
 module.exports = ACTIONS;
